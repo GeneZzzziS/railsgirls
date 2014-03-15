@@ -8,21 +8,19 @@
 </head>
 <body>
 
-	<header class="navbar">
-	  <div class="container">
-	    <div class="navbar-header">
-	    	<a class="navbar-brand" href="/">Blog</a>
-	    	<ul class="nav navbar-nav">
-	    		<li>
-	    			<a href="/posts">Posts</a>
-	    		</li>
-	        	<li>
-	        		<%= link_to 'New Post', new_post_path %>
-	        	</li>
-	        </ul>
-	    </div>
-	  </div>
-	</header>
+<header class="navbar navbar-static-top">
+    <div class="navbar-inner">
+        <a class="brand" href="#">Blog</a>
+        <ul class="nav">
+            <li>
+                <a href="/posts">Posts</a>
+            </li>
+            <li>
+                <%= link_to 'New Post', new_post_path %>
+            </li>
+        </ul>
+    </div>
+</header>
 
 <%= yield %>
 

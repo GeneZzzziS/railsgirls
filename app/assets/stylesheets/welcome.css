@@ -1,13 +1,14 @@
-.navbar{
-	background-color: #dd390d;
+.navbar-inner{
+	background: #dd390d;
 }
 
-.navbar-brand{
-	float: left;
-	line-height: 40px;
-	padding: 0 15px;
+.navbar .brand{
 	color: #fff;
-	font-size: 18px
+  text-shadow: none;
+}
+.navbar .brand:hover{
+  background: transparent;
+  color: black;
 }
 .navbar .nav>li>a{
 	text-shadow: none;
