@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<!-- Шапка -->
 <header class="navbar navbar-static-top">
     <div class="navbar-inner">
         <a class="brand" href="#">Blog</a>
@@ -22,7 +23,16 @@
     </div>
 </header>
 
-<%= yield %>
+<div class="container">
+    <div class="row">
+        <div class="span8">
+            <%= yield %>
+        </div>
+        <div class="span4">
+            Sidebar
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

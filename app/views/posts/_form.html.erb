@@ -1,4 +1,6 @@
-<%= form_for(@post) do |f| %>
+<%= form_for @post, html: {class: "form-horizontal"} do |f| %>
+  
+  <!-- Ошибки -->
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -11,6 +13,8 @@
     </div>
   <% end %>
 
+  <!-- Ввод данных -->
+
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -22,4 +26,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
