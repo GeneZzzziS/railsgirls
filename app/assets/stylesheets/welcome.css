@@ -27,3 +27,12 @@
   color: white;
   text-shadow: none;
 }
+
+/* Комментарий */
+
+.news-list-item img{
+  max-width: 200px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}

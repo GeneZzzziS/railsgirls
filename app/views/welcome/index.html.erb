@@ -1,21 +1,23 @@
-<div class="container">
-	<div class="row">
-		<div class="span8">
-			<div class="news-list">
-				<%- 5.times do %>
-					<div class="news-list-item">
-						<h2>Блоговая запись</h2>
-						<small class="muted"> 12.01.2014 </small>
-						<p>
-							This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.
-						</p>
-					</div>
-				<% end %>
-			</div>
-		</div>
-		<div class="span4">
-			Sidebar
-		</div>
+<div class="news-list">
+  <% @posts.each do |post| %>
+    <div class="news-list-item">
+      <h2>
+        <%= link_to post.title, post %>
+      </h2>
+      <small class="muted"><%= l post.created_at %></small>
+      <p class="clearfix">
+        <%= image_tag post.img_url %>
+        <%= post.text %>
+      </p>
 
-	</div>
+      <% if current_user.present? && post.user == current_user %>
+	      <div>
+	        <%= link_to 'Edit', edit_post_path(post), class: "btn btn-warning" %>
+	        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"  %>
+	      </div>
+	    <% end %>
+	    
+      <hr/>
+    </div>
+  <% end %>
 </div>
