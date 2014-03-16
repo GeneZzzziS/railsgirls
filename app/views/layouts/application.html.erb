@@ -20,6 +20,32 @@
                 <%= link_to 'New Post', new_post_path %>
             </li>
         </ul>
+
+        <!-- Авторизация -->
+        <ul class="nav pull-right">
+            <%- if current_user.present? %>
+
+                <li>
+                    <a href="#">
+                        <%= current_user.email %>
+                    </a>
+                </li>
+                <li>
+                    <%= link_to "Выйти", destroy_user_session_path, method: :delete %>
+                </li>
+
+            <% else %>
+
+                <li>
+                    <%= link_to "Войти", new_user_session_path %>
+                </li>
+                <li>
+                    <%= link_to "Регистрация", new_user_registration_path %>
+                </li>
+
+            <% end %>
+        </ul>
+
     </div>
 </header>
 
