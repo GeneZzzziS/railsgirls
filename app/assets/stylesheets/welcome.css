@@ -14,3 +14,16 @@
 	text-shadow: none;
 	color: #fff;
 }
+
+/**/
+
+.btn-railsgirls{
+  background: #dd390d;
+  color: white;
+  text-shadow: none;
+}
+.btn-railsgirls:hover{
+  background: #761D05;
+  color: white;
+  text-shadow: none;
+}
